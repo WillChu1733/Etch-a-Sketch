@@ -1,17 +1,19 @@
+// selecting the first element with the class 'container', assigning it to variable container
 const container = document.querySelector('.container')
 const num = 16
 
 const createDiv = () => {
   for (let i = 0; i < num; i++) {
-    const row = document.createElement('div')
-    row.classList.add('grid-row')
+    const gridRow = document.createElement('div')
+    gridRow.classList.add('grid-row')
 
     for (let j = 0; j < num; j++) {
       const gridBox = document.createElement('div')
       gridBox.classList.add('grid-box')
-      row.appendChild(gridBox)
+      // grid-row becomes parent of grid-box
+      gridRow.appendChild(gridBox)
     }
-    container.appendChild(row)
+    container.appendChild(gridRow)
   }
 }
 
