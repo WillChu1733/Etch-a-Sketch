@@ -11,10 +11,14 @@ const createDiv = () => {
       const gridBox = document.createElement('div')
       gridBox.classList.add('grid-box')
       // grid-row becomes parent of grid-box
+      gridBox.addEventListener('mouseenter', mouseEnter)
       gridRow.appendChild(gridBox)
     }
     container.appendChild(gridRow)
   }
 }
 
+function mouseEnter(event) {
+  event.target.style.backgroundColor = 'black'
+}
 createDiv()
