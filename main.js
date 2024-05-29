@@ -3,12 +3,13 @@ const container = document.querySelector('.container')
 const num = 16
 const resetButton = document.querySelector('.reset-button')
 
-const createDiv = () => {
-  for (let i = 0; i < num; i++) {
+const createDiv = (size = num) => {
+  container.innerHTML = ''
+  for (let i = 0; i < size; i++) {
     const gridRow = document.createElement('div')
     gridRow.classList.add('grid-row')
 
-    for (let j = 0; j < num; j++) {
+    for (let j = 0; j < size; j++) {
       const gridBox = document.createElement('div')
       gridBox.classList.add('grid-box')
       gridBox.addEventListener('mouseenter', mouseEnter)
